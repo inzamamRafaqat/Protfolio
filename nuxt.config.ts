@@ -24,6 +24,10 @@ export default defineNuxtConfig({
     base: process.env.NUXT_APP_BASE_URL || '/'
   },
 
+  router: {
+    base: process.env.NUXT_APP_BASE_URL || '/'
+  },
+
   css: ['~/assets/css/main.css'],
 
   colorMode: {
