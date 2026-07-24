@@ -43,7 +43,7 @@ const formEndpoint = `https://formsubmit.co/${profile.email}`
           <input
             type="hidden"
             name="_next"
-            :value="`${useRuntimeConfig().app.baseURL.replace(/\/$/, '')}#contact`"
+            :value="`${typeof window !== 'undefined' ? window.location.origin : 'https://inzamamrafaqat.github.io'}${useRuntimeConfig().app.baseURL.replace(/\/$/, '')}#contact`"
           >
 
           <div class="grid gap-4 sm:grid-cols-2">
