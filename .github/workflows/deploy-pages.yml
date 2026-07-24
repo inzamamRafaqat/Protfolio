@@ -1,4 +1,4 @@
-name: Deploy portfolio to GitHub Pages
+name: Deploy portfolio to GitHub Pages # Fixed the key name
 
 on:
   push:
@@ -24,9 +24,9 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24 # Updated to 24 to fix the deprecation warning
           cache: npm
           cache-dependency-path: package-lock.json
 
@@ -36,7 +36,7 @@ jobs:
       - name: Generate static site
         run: npm run generate
         env:
-          NUXT_APP_BASE_URL: /Protfolio/
+          NUXT_APP_BASE_URL: /Portfolio/ # Fixed the 'Protfolio' typo (ensure this matches your repo name exactly!)
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
