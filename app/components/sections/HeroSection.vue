@@ -2,8 +2,8 @@
 import { profile } from '~/data/profile'
 
 const stats = [
-  { label: 'Products shipped', target: 10+, suffix: '' },
-  { label: 'LLM-powered products', target: 3, suffix: '' },
+  { label: 'Products shipped', target: 16, suffix: '' },
+  { label: 'LLM-powered products', target: 6, suffix: '' },
   { label: 'Countries screened (AML Watcher)', target: 235, suffix: '+' },
   { label: 'Languages supported (AML Watcher)', target: 80, suffix: '+' }
 ]

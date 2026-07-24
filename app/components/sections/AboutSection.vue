@@ -24,7 +24,7 @@ const socials = computed(() => {
 
 // Drop a real photo at /public/portrait.jpg (or /public/portrait.png) to
 // replace the placeholder monogram below — no code changes needed.
-const portraitSrc = '/portrait.jpg'
+const portraitSrc = `${useRuntimeConfig().app.baseURL}WhatsAppImage2025-08-22at11.46.28AM.png`
 const portraitFailed = ref(false)
 </script>
 

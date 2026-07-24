@@ -1,20 +1,7 @@
 <script setup lang="ts">
 import { profile } from '~/data/profile'
 
-const form = reactive({
-  name: '',
-  email: '',
-  message: ''
-})
-
-// No backend exists for this static site, so "submit" opens the visitor's own
-// email client with the message pre-filled — it's genuinely functional
-// (nothing is faked as a silent server-side send).
-function submitContactForm() {
-  const subject = encodeURIComponent(`Portfolio inquiry from ${form.name || 'a visitor'}`)
-  const body = encodeURIComponent(`${form.message}\n\n— ${form.name} (${form.email})`)
-  window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`
-}
+const formEndpoint = `https://formsubmit.co/${profile.email}`
 </script>
 
 <template>
@@ -27,7 +14,7 @@ function submitContactForm() {
       :initial="{ opacity: 0, scale: 0.97 }"
       :visible-once="{ opacity: 1, scale: 1, transition: { duration: 500 } }"
       title="Let's build something great"
-      description="Open to full-stack and AI engineering roles — reach out and let's talk about how I can help your team ship."
+      description="Open to full-stack and AI engineering roles - reach out and let's talk about how I can help your team ship."
       variant="subtle"
       class="glass-panel glow-border relative isolate overflow-hidden"
     >
@@ -39,13 +26,26 @@ function submitContactForm() {
       <template #body>
         <form
           v-if="profile.email"
+          :action="formEndpoint"
+          method="POST"
           class="glass-panel glow-border mx-auto max-w-lg space-y-4 rounded-xl p-6 text-left sm:p-8"
-          @submit.prevent="submitContactForm"
         >
+          <input
+            type="hidden"
+            name="_subject"
+            value="New portfolio inquiry"
+          >
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          >
+
           <div class="grid gap-4 sm:grid-cols-2">
             <UFormField label="Name">
               <UInput
-                v-model="form.name"
+                name="name"
+                autocomplete="name"
                 placeholder="Your name"
                 class="w-full"
                 required
@@ -53,8 +53,9 @@ function submitContactForm() {
             </UFormField>
             <UFormField label="Email">
               <UInput
-                v-model="form.email"
+                name="email"
                 type="email"
+                autocomplete="email"
                 placeholder="you@example.com"
                 class="w-full"
                 required
@@ -64,7 +65,7 @@ function submitContactForm() {
 
           <UFormField label="Message">
             <UTextarea
-              v-model="form.message"
+              name="message"
               placeholder="What are you looking to build?"
               :rows="4"
               class="w-full"
@@ -74,7 +75,7 @@ function submitContactForm() {
 
           <div class="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p class="text-xs text-muted">
-              Opens your email client with this pre-filled — nothing is sent automatically.
+              Messages are sent directly to {{ profile.email }}.
             </p>
             <UButton
               type="submit"

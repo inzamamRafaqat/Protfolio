@@ -21,6 +21,7 @@ useHead({
 
 const title = `${profile.name} — ${profile.title}`
 const description = profile.tagline
+const resumeUrl = `${useRuntimeConfig().app.baseURL}${profile.resumeUrl.replace(/^\//, '')}`
 
 useSeoMeta({
   title,
@@ -152,7 +153,7 @@ const socials = computed(() => {
         <UButton
           v-if="profile.resumeUrl"
           label="Download CV"
-          :to="profile.resumeUrl"
+          :to="resumeUrl"
           target="_blank"
           icon="i-lucide-download"
           size="sm"
@@ -192,7 +193,7 @@ const socials = computed(() => {
         <UButton
           v-if="profile.resumeUrl"
           label="Download CV"
-          :to="profile.resumeUrl"
+          :to="resumeUrl"
           target="_blank"
           icon="i-lucide-download"
           block

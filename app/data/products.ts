@@ -90,6 +90,66 @@ export const products: Product[] = [
     link: ''
   },
   {
+    slug: 'sales-dashboard',
+    name: 'Sales Dashboard',
+    tagline: 'Claude-powered internal sales dashboard',
+    description: 'An internal sales dashboard powered by Claude, MCP server integrations, and custom Claude Skills.',
+    highlights: [
+      'Surfaces live sales activity for the team',
+      'Uses Claude with MCP integrations and custom Skills',
+      'Supports sales visibility and automation workflows'
+    ],
+    stack: ['Claude AI', 'MCP', 'Custom Skills', 'Sales Automation'],
+    icon: 'i-lucide-line-chart',
+    color: 'rose',
+    link: 'https://deals.shuftiapps.com/'
+  },
+  {
+    slug: 'sales-copilot',
+    name: 'Sales Copilot',
+    tagline: 'Claude-powered sales-automation workspace',
+    description: 'An internal workspace that supports sales automation with Claude, MCP server integrations, and custom Claude Skills.',
+    highlights: [
+      'Surfaces live sales activity for the team',
+      'Uses Claude with MCP integrations and custom Skills',
+      'Designed to support internal sales workflows'
+    ],
+    stack: ['Claude AI', 'MCP', 'Custom Skills', 'Sales Automation'],
+    icon: 'i-lucide-bot',
+    color: 'blue',
+    link: 'https://salescopilot.shuftiapps.com/workspace'
+  },
+  {
+    slug: 'interactive-demos',
+    name: 'Interactive Demos',
+    tagline: 'Claude-powered product demo experiences',
+    description: 'Interactive demo experiences for internal teams and prospect-facing product conversations.',
+    highlights: [
+      'Claude-powered interactive demos',
+      'Supports internal and prospect-facing use',
+      'Makes product capabilities easier to explore'
+    ],
+    stack: ['Claude AI', 'Interactive Demos'],
+    icon: 'i-lucide-monitor-play',
+    color: 'violet',
+    link: ''
+  },
+  {
+    slug: 'competitor-analyzer',
+    name: 'Competitor Analyzer',
+    tagline: 'Claude-powered competitor content analysis',
+    description: 'A tool that analyzes competitor social and marketing posts and turns the findings into concrete content and positioning suggestions.',
+    highlights: [
+      'Analyzes competitor social and marketing content',
+      'Generates usable content and positioning suggestions',
+      'Supports faster competitive research'
+    ],
+    stack: ['Claude AI', 'Content Analysis', 'Competitive Research'],
+    icon: 'i-lucide-chart-no-axes-combined',
+    color: 'rose',
+    link: ''
+  },
+  {
     slug: 'shipsanitor',
     name: 'ShipSanitor',
     tagline: 'Offline-first AI-powered maritime inspection app',
