@@ -78,7 +78,7 @@ const portraitFailed = ref(false)
             class="code-backdrop absolute inset-0 overflow-hidden p-5 font-mono text-[11px] leading-5 text-dimmed select-none"
           ><span class="text-primary">const</span> engineer = {
   name: <span class="text-secondary">'{{ profile.name }}'</span>,
-  stack: [<span class="text-secondary">'Vue'</span>, <span class="text-secondary">'Nuxt'</span>, <span class="text-secondary">'Python'</span>, <span class="text-secondary">'AI'</span>],
+  stack: [<span class="text-secondary">'React'</span>, <span class="text-secondary">'TypeScript'</span>, <span class="text-secondary">'Node.js'</span>, <span class="text-secondary">'AI'</span>],
   focus: <span class="text-secondary">'ship fast, ship clean'</span>,
 }
 

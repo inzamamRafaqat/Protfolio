@@ -7,7 +7,7 @@ import { products } from '~/data/products'
     id="products"
     class="scroll-mt-20"
     title="What I've shipped"
-    description="Five production products spanning AI assistants, compliance automation, and revenue tooling — each built end to end."
+    description="Selected products spanning AI tools, compliance technology, offline-first inspections, and full-stack web applications."
     :ui="{ container: 'py-12 sm:py-16 lg:py-20' }"
   >
     <template #headline>

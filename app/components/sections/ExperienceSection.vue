@@ -4,7 +4,7 @@ import { experience } from '~/data/experience'
 const indexedExperience = experience.map((item, index) => ({
   ...item,
   _index: index,
-  ui: item.date === 'Present' ? { indicator: 'pulse-dot' } : undefined
+  ui: item.date.includes('Present') ? { indicator: 'pulse-dot' } : undefined
 }))
 </script>
 

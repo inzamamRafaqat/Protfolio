@@ -35,7 +35,6 @@ const navLinks = [
   { label: 'Experience', to: '#experience' },
   { label: 'Products', to: '#products' },
   { label: 'Skills', to: '#skills' },
-  { label: 'Testimonials', to: '#testimonials' },
   { label: 'Contact', to: '#contact' }
 ]
 

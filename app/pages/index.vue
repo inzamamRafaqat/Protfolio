@@ -6,7 +6,6 @@
     <ExperienceSection />
     <ProductsSection />
     <SkillsSection />
-    <TestimonialsSection />
     <ContactSection />
   </div>
 </template>

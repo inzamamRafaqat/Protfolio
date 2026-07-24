@@ -8,21 +8,21 @@ export const skills: SkillGroup[] = [
   {
     category: 'Frontend',
     icon: 'i-lucide-layout-panel-left',
-    items: ['Vue 3', 'Nuxt 3', 'Nuxt UI', 'React', 'Tailwind CSS', 'Pinia', 'TanStack Query']
+    items: ['React', 'TypeScript', 'JavaScript', 'Angular', 'Vue.js', 'Redux', 'Tailwind CSS', 'Bootstrap']
   },
   {
     category: 'Backend',
     icon: 'i-lucide-server',
-    items: ['Python', 'FastAPI', 'Node.js', 'REST APIs', 'Webhooks', 'PostgreSQL']
+    items: ['Node.js', 'Express.js', 'PHP', 'Laravel', 'WordPress', 'REST APIs', 'WebSockets', 'MongoDB', 'PostgreSQL', 'SQL']
   },
   {
-    category: 'AI & Retrieval',
+    category: 'AI & Testing',
     icon: 'i-lucide-brain-circuit',
-    items: ['Google Gemini', 'Groq', 'OpenAI', 'RAG pipelines', 'Pinecone', 'Prompt engineering']
+    items: ['Claude API', 'ML model integration', 'AI-assisted automation', 'React Testing Library', 'Component testing', 'Debugging']
   },
   {
     category: 'Platform & Tools',
     icon: 'i-lucide-wrench',
-    items: ['Electron', 'Firebase', 'Socket.io', 'OAuth2 / JWT', 'Docker', 'Git']
+    items: ['React Native', 'Firebase', 'SQLite', 'Offline-first architecture', 'Background sync', 'Ionic', 'Git', 'GitHub']
   }
 ]

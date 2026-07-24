@@ -7,96 +7,132 @@ export interface Product {
   stack: string[]
   icon: string
   color: 'blue' | 'violet' | 'emerald' | 'amber' | 'rose'
-  link: string // live URL, if publicly shareable — leave blank otherwise
+  link: string
 }
 
 export const products: Product[] = [
   {
-    slug: 'bariq-ai',
-    name: 'Bariq.ai',
-    tagline: 'AI chat assistant desktop app with built-in productivity tools',
-    description: 'A ChatGPT-style AI assistant shipped as a cross-platform desktop app, pairing conversational chat with built-in rich-text, spreadsheet, and image editors so users can create and refine content without ever leaving the conversation.',
+    slug: 'barie-ai',
+    name: 'Barie.ai',
+    tagline: 'Real-time, WebSocket-driven AI platform',
+    description: 'A full-stack AI platform with real-time editing tools that lets users create and refine content collaboratively.',
     highlights: [
-      'Multi-turn conversational chat interface with rich, formatted responses',
-      'Built-in document, spreadsheet, and image editors (Tiptap + Konva) inside the chat',
-      '"Explore" and "Library" hub for templates and saved work',
-      'Integrations panel for connecting third-party tools',
-      'Multi-language (i18n) support with light/dark theming',
-      'Packaged as a native desktop app via Electron, with Firebase-backed auth'
+      'Canvas-based image editor and dynamic document editor',
+      'WebSockets for live, multi-user state synchronization',
+      'Event-driven architecture for ML model integration',
+      'Built as part of work at Programmers Force'
     ],
-    stack: ['Nuxt 3', 'Nuxt UI', 'Vue 3', 'Tailwind CSS', 'Pinia', 'Electron', 'Firebase', 'Tiptap', 'Konva'],
+    stack: ['React', 'TypeScript', 'WebSockets', 'Canvas', 'ML Integration'],
     icon: 'i-lucide-bot-message-square',
     color: 'blue',
     link: ''
   },
   {
-    slug: 'aml-watcher',
-    name: 'AML Watcher',
-    tagline: 'Global AML/KYC screening and case-management platform',
-    description: 'A compliance platform that screens individuals and entities against sanctions lists, watchlists, PEPs, and adverse media across 235+ territories and 80+ languages — giving analysts real-time risk scores, case management, and organization-wide administration.',
+    slug: 'amlwatcher',
+    name: 'AMLWatcher',
+    tagline: 'Real-time compliance platform',
+    description: 'A live compliance platform where I developed real-time news updates and integrated APIs for continuous front-end and back-end data synchronization.',
     highlights: [
-      'Real-time entity screening against sanctions, PEP, and adverse-media sources',
-      'Ongoing monitoring with automatic risk re-scoring as new data appears',
-      'Case-management workflow with webhook integrations for compliance analysts',
-      'Admin backoffice for organization, user, and role management',
-      'Custom Python crawler pipeline with PDF/image extraction feeding the risk data',
-      'Supports on-premise deployment for regulated clients'
+      'Developed the production front end with a React focus',
+      'Implemented a live News Update feature',
+      'Integrated APIs for real-time frontend-backend synchronization',
+      'Built for a live compliance product at amlwatcher.com'
     ],
-    stack: ['Vue 3', 'Quasar', 'Highcharts', 'Socket.io', 'Pinia', 'Python', 'PostgreSQL'],
+    stack: ['React', 'TypeScript', 'REST APIs', 'Real-time Sync'],
     icon: 'i-lucide-shield-check',
     color: 'emerald',
-    link: ''
+    link: 'https://amlwatcher.com'
   },
   {
-    slug: 'shufti-automations',
-    name: 'Shufti Automations',
-    tagline: 'Internal API testing and automation suite for identity verification',
-    description: 'A purpose-built internal tool for constructing, sending, and inspecting identity-verification API requests — Face, Document, Address, AML, and KYB — replacing ad-hoc Postman collections with a dedicated playground, later rewritten in Nuxt 3 with an integrated code editor.',
+    slug: 'shufti',
+    name: 'Shufti',
+    tagline: 'AI-native sales automation tool',
+    description: 'A Python-based sales automation tool that uses the Claude API to automate repetitive engineering and business workflows.',
     highlights: [
-      'Visual request builder covering 5 verification types',
-      'JSON request/response inspector with syntax highlighting',
-      'Webhook payload viewer and import for debugging callbacks',
-      'Local request history with search and filtering',
-      'Monaco-powered code playground in the Nuxt rewrite'
+      'Python-based automation workflows',
+      'Claude API integration for AI-assisted logic',
+      'AI-native development approach to improve throughput',
+      'Built as part of work at Programmers Force'
     ],
-    stack: ['Nuxt 3', 'Nuxt UI', 'Vue Monaco Editor', 'Pinia', 'TanStack Query', 'React (v1)'],
-    icon: 'i-lucide-flask-conical',
+    stack: ['Python', 'Claude API', 'Automation', 'AI Integration'],
+    icon: 'i-lucide-sparkles',
     color: 'violet',
     link: ''
   },
   {
     slug: 'shufti-collateral',
     name: 'Shufti Collateral',
-    tagline: 'AI-powered semantic search over sales collateral',
-    description: 'A retrieval-augmented system that indexes sales decks, spreadsheets, and PDFs at slide- and sheet-level granularity — including visual content — so sales reps can search or chat their way to the exact material they need instead of digging through shared drives.',
+    tagline: 'Claude-powered retrieval and slide generation',
+    description: 'An AI-powered retrieval and generation system over a large library of Shufti sales collateral.',
     highlights: [
-      'Multimodal parsing of PPTX, PDF, and XLSX files, including visual slide content',
-      'Natural-language semantic search plus a conversational chat mode',
-      'CLI for indexing, searching, chatting, and inspecting stats',
-      'FastAPI backend with a Nuxt 3 web UI',
-      'Gemini as primary LLM with Groq as fallback for resilience',
-      'Pinecone vector store for fast retrieval at scale'
+      'Searches the collateral library for relevant product assets',
+      'Uses Claude to assemble a presentation-ready slide deck',
+      'Supports sales teams in finding and preparing material faster'
     ],
-    stack: ['Python', 'FastAPI', 'PyMuPDF', 'python-pptx', 'Google Gemini', 'Groq', 'Pinecone', 'Nuxt 3'],
+    stack: ['Claude AI', 'Retrieval', 'Slide Generation'],
     icon: 'i-lucide-search',
+    color: 'amber',
+    link: 'https://ai.shuftiapps.com/collateral_v1.2/auth/login'
+  },
+  {
+    slug: 'shufti-documentation',
+    name: 'Shufti Documentation',
+    tagline: 'Claude-powered documentation workflow',
+    description: 'An AI-driven workflow that generates and updates product documentation as the platform evolves.',
+    highlights: [
+      'Claude generates and updates product documentation',
+      'Reduces manual documentation maintenance',
+      'Keeps documentation aligned with product changes'
+    ],
+    stack: ['Claude AI', 'Documentation Automation'],
+    icon: 'i-lucide-book-open-check',
+    color: 'emerald',
+    link: ''
+  },
+  {
+    slug: 'shipsanitor',
+    name: 'ShipSanitor',
+    tagline: 'Offline-first AI-powered maritime inspection app',
+    description: 'A field-focused maritime inspection application designed to work reliably in low-connectivity environments, combining offline data capture with background synchronization once connectivity returns.',
+    highlights: [
+      'Led architecture planning and core feature development',
+      'Offline SQLite storage with background synchronization',
+      'Automated SOP enforcement for field inspections',
+      'Ship inventory management workflows and QR-based secure access'
+    ],
+    stack: ['Ionic', 'Angular', 'SQLite', 'Background Sync', 'QR Access'],
+    icon: 'i-lucide-ship-wheel',
     color: 'amber',
     link: ''
   },
   {
-    slug: 'sales-dashboard',
-    name: 'Sales Dashboard',
-    tagline: 'Real-time HubSpot deal-health and forecasting dashboard',
-    description: 'A production dashboard that syncs live from HubSpot CRM to surface deal health, win probability, and pipeline risk for sales leadership, with LLM-assisted forecasting, deal summarization, and automated daily digests.',
+    slug: 'uberrental',
+    name: 'Uberrental',
+    tagline: 'React Native car-rental mobile app',
+    description: 'A mobile application for car-rental workflows, built with React Native.',
     highlights: [
-      'Live HubSpot CRM sync via a background scheduler',
-      'Deal health scoring and win-probability modeling',
-      'Advanced filtering by stage, owner, health score, and deal amount',
-      'LLM-based forecasting and deal summarization',
-      'Google OAuth2 authentication with JWT-based sessions',
-      'Responsive, dark/light themed UI with quick search ("/")'
+      'Cross-platform mobile experience for car rentals',
+      'Built with React Native',
+      'Focused on a simple rental experience for users'
     ],
-    stack: ['React', 'Vite', 'Recharts', 'Python', 'HubSpot API', 'Google OAuth2'],
-    icon: 'i-lucide-line-chart',
+    stack: ['React Native', 'Mobile Development'],
+    icon: 'i-lucide-car-front',
+    color: 'blue',
+    link: ''
+  },
+  {
+    slug: 'serveayani',
+    name: 'Serveayani',
+    tagline: 'Full-stack MERN application with an admin dashboard',
+    description: 'A full-stack application with a responsive React user interface, Node.js and Express REST APIs, and an admin panel for data-driven operational dashboards.',
+    highlights: [
+      'Responsive React.js interface for a consistent user experience',
+      'REST APIs built with Node.js and Express.js',
+      'MongoDB-backed data management',
+      'Admin panel with data-driven dashboards'
+    ],
+    stack: ['React', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs'],
+    icon: 'i-lucide-layout-dashboard',
     color: 'rose',
     link: ''
   }
