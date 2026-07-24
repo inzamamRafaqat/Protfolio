@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/'
+  },
 
   modules: [
     '@nuxt/eslint',
@@ -16,8 +19,9 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true
   },
-  app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || '/'
+
+  vite: {
+    base: process.env.NUXT_APP_BASE_URL || '/'
   },
 
   css: ['~/assets/css/main.css'],
